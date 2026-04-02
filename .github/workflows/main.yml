@@ -3,7 +3,7 @@ name: JavaGoat-WhatsApp-Bot
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 */5 * * *' 
+    - cron: '0 */5 * * *'
 
 jobs:
   build:
@@ -20,8 +20,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-          - name: Start AI Bot
-      env:
-        FIREBASE_URL: 'https://hadi-x-default-rtdb.firebaseio.com/'
-      run: npm start
-
+      - name: Start AI Bot
+        env:
+          FIREBASE_URL: 'https://hadi-x-default-rtdb.firebaseio.com/'
+        run: npm start
