@@ -20,7 +20,8 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Start AI Bot
-        env:
-          FIREBASE_URL: ${{https://hadi-x-default-rtdb.firebaseio.com/}}
-        run: npm start
+          - name: Start AI Bot
+      env:
+        FIREBASE_URL: 'https://hadi-x-default-rtdb.firebaseio.com/'
+      run: npm start
+
